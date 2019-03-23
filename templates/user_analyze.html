@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<div>
+	<a href="https://docs.google.com/forms/d/e/1FAIpQLSdkJNb6VeGzJOC3XFgBp7mukYRUK61ewKtNPh-TSwNGqLlfVw/viewform?usp=sf_link"><button type="button" class="btn btn-outline-dark btn-lg" style="position: absolute;top: 10px;right: 150px"><strong>Survey Form</strong></button></a>
+    <a href="../analyze/new"><button type="button" class="btn btn-dark btn-lg" style="position: absolute;top: 10px;right: 300px"><strong>New Analysis</strong></button></a>
+    <a href="/login"><button type="button" class="btn btn-dark btn-lg" style="position: absolute;top: 10px;right: 30px"><strong>Log out</strong></button></a>
+</div>
+<body background="https://backgroundcheckall.com/wp-content/uploads/2017/12/old-paper-background-hd-1.jpg" style="background-size: 100%">
+    <div class="container">
+    	<div>
+	    	<h1 style="text-align: left;display: inline-block;"><strong><font color="black">{{ name }}'s Entries</font></strong></h1>
+	    	<span style="margin: 380px"></span>
+
+	    </div>
+	    <hr style="height:4px;border:none;color:black;background-color:black;" />
+	    {% for anal in analyze %}
+		    <p><strong>{{ anal.description }}</strong></p>
+		    <hr style="height:1px;border:none;color:black;background-color:black;" />
+	    {% endfor %}
+    </div>
+</body>
+{% endblock %}

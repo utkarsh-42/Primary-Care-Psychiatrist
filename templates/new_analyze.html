@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<body background="https://backgroundcheckall.com/wp-content/uploads/2017/12/old-paper-background-hd-1.jpg" style="background-size: 100%">
+<a href="/login"><button type="button" class="btn btn-dark btn-lg" style="position: absolute;top: 10px;right: 30px"><strong>Log out</strong></button></a>
+    <div class="container">
+	    <form id="new-analyze" action="/analyze/new" method="post">
+		    <div class="form-group">
+
+		    </div>
+		    <div class="form-group">
+			    <label for="description">Description</label>
+			    <input type="text" id="description" class="form-control" name="description">
+		    </div>
+
+	    	<button type="submit" class="btn btn-primary">Create Data</button>
+	    </form>
+    </div>
+</body>
+{% endblock %}
